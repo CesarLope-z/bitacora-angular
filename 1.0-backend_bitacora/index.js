@@ -24,6 +24,7 @@ function crearEsquema(db) {
     CREATE TABLE IF NOT EXISTS bitacora (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
         estudianteId INTEGER,
+        nombre TEXT NOT NULL,
         fecha TEXT NOT NULL,
         horas INTEGER NOT NULL,
         descripcion TEXT,
@@ -33,13 +34,13 @@ function crearEsquema(db) {
 }
 
 crearEsquema(dbIngenieria);
-crearEsquema(dbAdministracion);
-crearEsquema(dbMultimedia);
+// crearEsquema(dbAdministracion);
+// crearEsquema(dbMultimedia);
 
 const shards = {
   ingenieria: dbIngenieria,
-  administracion: dbAdministracion,
-  multimedia: dbMultimedia,
+  // administracion: dbAdministracion,
+  // multimedia: dbMultimedia,
 };
 
 app.use(cors());

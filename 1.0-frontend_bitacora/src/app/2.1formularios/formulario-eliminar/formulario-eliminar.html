@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Eliminar actividad</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="flex flex-col gap-4">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Numero de fila</mat-label>
+      <input matInput type="number" formControlName="id" /> 
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="eliminar()">Eliminar</button>
+</mat-dialog-actions>

@@ -43,8 +43,12 @@ main{
 }
 .acciones {
     display: flex;
-    justify-content: end;
-    margin-top: 1rem;
+    justify-content: space-around;
+    margin: 1rem;
+    background-color: #f3f3f3;
+    /* border: 2px solid #40aceb; */
+    padding: 1rem;
+    border-radius: 10px;
   }
   .acciones button {
     border: 2px solid #40aceb;
@@ -58,4 +62,9 @@ main{
     background-color: #40aceb;
     color: white;
     cursor: pointer;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }

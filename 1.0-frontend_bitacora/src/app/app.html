@@ -1,8 +1,28 @@
 
 <main class="main">
   <div class="content">
-    <h1>Bitácora</h1>
+    <h1>Bitácora de Actividades</h1>
     <p>Actividades que se realizaron durante las prácticas profesionales.</p>
+
+    <div class="acciones">
+      <!-- botones de guardar, editar, eliminar, exportar a word -->
+
+      <div >
+        <button class="btn btn-primary" (click)="abrirFormularioCrear()" >Crear fila</button>
+      </div>
+      <div >
+        <button class="btn btn-primary">Guardar Documento</button>
+      </div>
+      <div >
+        <button class="btn btn-primary" (click)="abrirFormularioEliminar()" >Eliminar filas</button>
+      </div>
+      <div >
+      <button type="button" (click)="exportWord()" class="btn btn-primary">Imprimir en un documento</button>
+    </div>
+
+
+    </div>
+
   <div class="informacion">
 
     <!-- Datos del alumno -->
@@ -58,10 +78,6 @@
     </div>
 
   </div>
-  <div class="acciones">
-      <button type="button" (click)="exportWord()" class="btn btn-primary">Imprimir en un documento</button>
-      <!-- <button type="button" class="btn btn-secondary">Cancelar</button> -->
-    </div>
 
   <div class="bitacora">
   <h2>Registro de actividades</h2>
@@ -69,6 +85,7 @@
   <table border="1" cellpadding="5" cellspacing="0" class="tabla-actividades">
     <thead>
       <tr>
+        <th>Numero</th>
         <th>Fecha</th>
         <th>Nombre</th>
         <th>Descripción de la actividad</th>
@@ -78,6 +95,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let act of actividad; let i = index">
+      <td> {{i + 1}} </td>
       <td><input type="date" [(ngModel)]="act.fecha"></td>
       <td><input type="text" [(ngModel)]="act.nombre"></td>
       <td><textarea rows="2" [(ngModel)]="act.descripcion"></textarea></td>
